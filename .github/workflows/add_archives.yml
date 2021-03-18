@@ -16,7 +16,7 @@ jobs:
         uses: kannansuresh/jekyll-blog-archive-workflow@master
         with:
           archive_url: "https://meowmiyamoto.github.io/archives/archivedata"
-          archive_folder_path: "https://github.com/meowmiyamoto/meowmiyamoto.github.io/tree/main/_archives"
+          archive_folder_path: "_archives"
 
       - name: setup git config
         run: |
