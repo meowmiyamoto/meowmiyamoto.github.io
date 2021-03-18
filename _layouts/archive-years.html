@@ -16,9 +16,11 @@ title: Archive-years
         </div>
         <div class="masonrygrid row listrecent">
 
-            {% for post in page.posts %}
-
-            {% include postbox.html %}
+            {% for post in site.posts %}
+            {% assign postyear = post.date | date: "%Y" %}
+            {% if postyear == page.year %}
+                {% include postbox.html %}
+            {% endif %}    
 
             {% endfor %}
 

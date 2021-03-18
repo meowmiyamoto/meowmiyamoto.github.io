@@ -16,9 +16,10 @@ title: Archive-categories
         </div>
         <div class="masonrygrid row listrecent">
 
-            {% for post in page.posts %}
-
-            {% include postbox.html %}
+            {% for post in site.posts %}
+            {% if post.categories contains page.category or post.category == page.category %}
+                {% include postbox.html %}
+            {% endif %}    
 
             {% endfor %}
 

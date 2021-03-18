@@ -16,11 +16,12 @@ title: Archive-tags
         </div>
         <div class="masonrygrid row listrecent">
 
-            {% for post in page.posts %}
+            {% for post in site.posts %}
+            {% if post.tags contains page.tag or post.tag == page.tag %}
+                {% include postbox.html %}
+                {% endif %}    
 
-            {% include postbox.html %}
-
-            {% endfor %}
+                {% endfor %}
 
         </div>
     </div>
