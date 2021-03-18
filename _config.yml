@@ -1,44 +1,79 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
 # Site
-name: "meow net"
-title: "meow net"
-description: "イラストレーターmeow(めお)のブログ"
-meta_description: "イラストレーターmeow(めお)のブログ"
+name: "meow.net"
+title: "meow.net"
+description: "海外在住イラストレーターmeow(めお)のブログ"
+meta_description: "海外在住イラストレーターmeow(めお)のブログ"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 paginate: 12
-baseurl: '/'
+baseurl: ''
 email: 'meowmiyamoto@gmail.com'
 google_analytics: 'UA-46278016-1'
 disqus: 'demowebsite'
-sharethis: '<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a6b2fe4fb197a0011c589f6&product=sticky-share-buttons"></script>'
+sharethis: '<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=60511a266f7ab900129ce9a0&product=inline-share-buttons" async="async"></script>'
 
 # Authors
 authors:
-  :
-    name: meow
-    display_name: meow
-    gravatar: e56154546cf4be74e393c62d1ae9f9d4
+  meow:
+    name: meow（めお）
+    display_name: meow(めお)
+    gravatar: 86b15cda84f1d5877aadeabbb5320d4b
     email: meowmiyamoto@gmail.com
     web: https://maomiyamoto/
     twitter: https://twitter.com/meeowmiya
     description: "ボストン在住フリーランスイラストレーター。フリーランス、英語、海外キャリア、ビザ、海外生活について書きます"
-  
-# Plugins
-plugins: 
+
+
+# Build settings
+plugins:
+  - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-archives
-        
+
 # Archives
-jekyll-archives:
-  enabled:
-    - categories
-  layout: archive
-  permalinks:
-    category: '/category/:name/'
-    
-# Other
-markdown: kramdown
-highlighter: rouge
+collections:
+  archives:
+    output: true
+    permalink: /archives/:path/
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
